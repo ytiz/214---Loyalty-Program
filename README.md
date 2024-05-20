@@ -1,5 +1,6 @@
 # 214---Loyalty-Program
 This repository if to manage the Loyalty Program created for FlyDreamAir
+
 Version 2.0 - Reward Redemption: Adding functionality to redeem points:
     
     func redeemPoints() {
@@ -10,7 +11,7 @@ Version 2.0 - Reward Redemption: Adding functionality to redeem points:
             message = "Not enough points to redeem."
         }
     }
-    
+
     var body: some View {
         VStack {
             Text("Your Points")
@@ -19,6 +20,7 @@ Version 2.0 - Reward Redemption: Adding functionality to redeem points:
             Text("\(points)")
                 .font(.title)
                 .padding()
+
             Button(action: redeemPoints) {
                 Text("Redeem 100 Points")
                     .padding()
@@ -32,6 +34,7 @@ Version 2.0 - Reward Redemption: Adding functionality to redeem points:
                     .foregroundColor(.green)
                     .padding()
             }
+
             Spacer()
         }
         .padding()
