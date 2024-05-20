@@ -2,8 +2,8 @@
 This repository if to manage the Loyalty Program created for FlyDreamAir
 Code for the app to manage Loaylty Points: 
 Develop Version 1.0 - Basic Points Display: 
-import SwiftUI
 
+import SwiftUI
 struct ContentView: View {
     @State private var points: Int = 1000
     
@@ -26,3 +26,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
