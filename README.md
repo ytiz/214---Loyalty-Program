@@ -1,10 +1,6 @@
 # 214---Loyalty-Program
 This repository if to manage the Loyalty Program created for FlyDreamAir
 Version 2.0 - Reward Redemption: Adding functionality to redeem points:
-
-struct ContentView: View {
-    @State private var points: Int = 1000
-    @State private var message: String?
     
     func redeemPoints() {
         if points >= 100 {
@@ -40,4 +36,4 @@ struct ContentView: View {
         }
         .padding()
     }
-}
+
