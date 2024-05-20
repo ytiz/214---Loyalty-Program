@@ -1,8 +1,16 @@
 # 214---Loyalty-Program
 This repository if to manage the Loyalty Program created for FlyDreamAir
-Code for the app to manage Loaylty Points: 
-Develop Version 1.0 - Basic Points Display: 
 
+Version 2.0 - Reward Redemption: Adding functionality to redeem points:
+    
+    func redeemPoints() {
+        if points >= 100 {
+            points -= 100
+            message = "Successfully redeemed 100 points!"
+        } else {
+            message = "Not enough points to redeem."
+        }
+    }
 
     var body: some View {
         VStack {
@@ -12,13 +20,23 @@ Develop Version 1.0 - Basic Points Display:
             Text("\(points)")
                 .font(.title)
                 .padding()
+
+            Button(action: redeemPoints) {
+                Text("Redeem 100 Points")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .padding()
+            if let message = message {
+                Text(message)
+                    .foregroundColor(.green)
+                    .padding()
+            }
+
             Spacer()
         }
         .padding()
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
